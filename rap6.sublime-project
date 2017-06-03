@@ -3,6 +3,9 @@
 	[
 		{
 			"path": "."
+		},
+		{
+			"path": "/Applications/XAMPP/xamppfiles/htdocs/my-site/wp-content/themes/my-theme"
 		}
 	]
 }

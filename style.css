@@ -280,6 +280,9 @@ mark, ins {
 big {
   font-size: 125%; }
 
+.center-text {
+  text-align: center; }
+
 /*--------------------------------------------------------------
 # Elements
 --------------------------------------------------------------*/
@@ -408,7 +411,7 @@ textarea {
 --------------------------------------------------------------*/
 /* Links */
 a {
-  color: royalblue; }
+  color: white; }
   a:visited {
     color: purple; }
   a:hover, a:focus, a:active {
@@ -421,9 +424,7 @@ a {
 /* Menus */
 .main-navigation {
   clear: both;
-  display: block;
-  float: left;
-  width: 100%; }
+  display: block; }
   .main-navigation ul {
     display: none;
     list-style: none;
@@ -656,3 +657,42 @@ object {
 # Page Templates
 --------------------------------------------------------------*/
 /* Front page */
+.flex {
+  display: -ms-flexbox;
+  display: flex; }
+
+.flex-row {
+  -ms-flex-flow: row wrap;
+      flex-flow: row wrap; }
+
+.flex-col {
+  -ms-flex-flow: col wrap;
+      flex-flow: col wrap; }
+
+.flex-center-a {
+  -ms-flex-align: center;
+      align-items: center; }
+
+.flex-center-j {
+  -ms-flex-pack: center;
+      justify-content: center; }
+
+.flex-space-between {
+  -ms-flex-pack: justify;
+      justify-content: space-between; }
+
+.height30px {
+  height: 30px; }
+
+.home-shop-cell {
+  height: 220px;
+  width: 175px;
+  border: solid grey;
+  border-width: 3px 1px 1px 1px;
+  margin: 5px;
+  padding: 5px; }
+
+.home-shop-button {
+  background-color: green;
+  color: white;
+  border-style: none; }

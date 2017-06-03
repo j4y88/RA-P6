@@ -3,3 +3,37 @@
 --------------------------------------------------------------*/
 
 /* Front page */
+.flex {
+	display: flex;
+}
+.flex-row {
+	flex-flow: row wrap;
+}
+.flex-col {
+	flex-flow: col wrap;
+}
+.flex-center-a {
+	align-items: center;
+}
+.flex-center-j {
+	justify-content: center;
+}
+.flex-space-between {
+	justify-content: space-between;
+}
+.height30px {
+	height: 30px;
+}
+.home-shop-cell {
+	height:220px;
+	width:175px;
+	border: solid grey;
+	border-width: 3px 1px 1px 1px;
+	margin: 5px;
+	padding: 5px;
+}
+.home-shop-button {
+	background-color: green;
+	color: white;
+	border-style: none;
+}

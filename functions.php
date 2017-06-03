@@ -39,6 +39,48 @@ function red_starter_setup() {
 endif; // red_starter_setup
 add_action( 'after_setup_theme', 'red_starter_setup' );
 
+function add_case_type($name) {
+    $name_dash=str_replace(" ","_",$type);
+    register_post_type( strtolower($name),
+        array(
+            'labels' => array(
+                'name' => __( ucwords(strtolower($name)) ),
+                'singular_name' => __( $name )
+            ),
+            'public' => true,
+            'has_archive' => true,
+            'rewrite' => array('slug' => strtolower($name_dash)),
+        )
+    );
+}
+function add_taxonomy(){
+    $taxonomy_array = array(
+        "Products" => array("Type"),
+        "Advenures"
+        );
+    foreach ($taxonomy_array as $key=>$a){
+        if (is_array($a)){
+            add_case_type($key);
+            foreach ($a as $value){
+                add_taxonomy_type($value, $key);
+            }
+        } else { 
+            add_case_type($a);
+        }
+    }
+}
+function add_taxonomy_type($value, $key) {
+    $new_value=str_replace(" ","_",$value);
+    register_taxonomy(  strtolower($new_value), strtolower($key), array(
+        'label'        => __( ucwords(strtolower($value)) ),
+        'rewrite'      => array( 'slug' => strtolower($new_value) ),
+        'hierarchical' => true,
+    ) );
+}
+add_action( 'init', 'add_taxonomy');
+
+
+
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
  *

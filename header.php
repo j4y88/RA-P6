@@ -21,15 +21,23 @@
 			<a class="skip-link screen-reader-text" href="#content"><?php esc_html( 'Skip to content' ); ?></a>
 
 			<header id="masthead" class="site-header" role="banner">
-				<div class="site-branding">
-					<h1 class="site-title screen-reader-text"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-					<p class="site-description"><?php bloginfo( 'description' ); ?></p>
-				</div><!-- .site-branding -->
-
-				<nav id="site-navigation" class="main-navigation" role="navigation">
-					<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html( 'Primary Menu' ); ?></button>
-					<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
-				</nav><!-- #site-navigation -->
+				<style>
+					.hero-background {
+						background: url(<?php the_field("company-logo"); ?>) center no-repeat,
+						url(<?php the_field("banner-image"); ?>) center no-repeat;
+						background-size: auto, cover;
+						height: 50vh;
+					}
+				</style>
+				<div class="hero-background">
+					<div class="height30px flex flex-center-a flex-space-between">
+						<?php echo "<img src='".get_bloginfo("stylesheet_directory")."/assets/images/logos/inhabitent-logo-tent-white.svg' class='height30px'>"; ?>
+						<nav id="site-navigation" class="main-navigation" role="navigation">
+							<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html( 'Primary Menu' ); ?></button>
+							<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
+						</nav><!-- #site-navigation -->
+					</div>
+				</div>
 			</header><!-- #masthead -->
 
-			<div id="content" class="site-content">
+			
