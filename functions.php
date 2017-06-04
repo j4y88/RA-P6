@@ -50,13 +50,14 @@ function add_case_type($name) {
             'public' => true,
             'has_archive' => true,
             'rewrite' => array('slug' => strtolower($name_dash)),
+            'supports' => array( 'title', 'editor', 'author', 'thumbnail')
         )
     );
 }
 function add_taxonomy(){
     $taxonomy_array = array(
         "Products" => array("Type"),
-        "Advenures"
+        "Adventures"
         );
     foreach ($taxonomy_array as $key=>$a){
         if (is_array($a)){
