@@ -291,12 +291,6 @@ html {
   font-size: 16px;
   font-size: 1rem; }
 
-*,
-*:before,
-*:after {
-  /* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
-  box-sizing: inherit; }
-
 body {
   background: #fff;
   /* Fallback for when there is no custom background color defined. */ }
@@ -350,23 +344,21 @@ button,
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
-  border: 1px solid;
-  border-color: #ccc #ccc #bbb;
+  border: none;
+  border-color: none;
   border-radius: 3px;
-  background: #e6e6e6;
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5), inset 0 15px 17px rgba(255, 255, 255, 0.5), inset 0 -5px 12px rgba(0, 0, 0, 0.05);
+  background: #548683;
   color: rgba(0, 0, 0, 0.8);
   font-size: 12px;
   font-size: 0.75rem;
   line-height: 1;
   padding: .6rem 1rem .4rem;
-  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8); }
+  text-shadow: none; }
   button:hover,
   input[type="button"]:hover,
   input[type="reset"]:hover,
   input[type="submit"]:hover {
-    border-color: #ccc #bbb #aaa;
-    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8), inset 0 15px 17px rgba(255, 255, 255, 0.8), inset 0 -5px 12px rgba(0, 0, 0, 0.02); }
+    border-color: none; }
   button:active, button:focus,
   input[type="button"]:active,
   input[type="button"]:focus,
@@ -374,8 +366,7 @@ input[type="submit"] {
   input[type="reset"]:focus,
   input[type="submit"]:active,
   input[type="submit"]:focus {
-    border-color: #aaa #bbb #bbb;
-    box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.5), inset 0 2px 5px rgba(0, 0, 0, 0.15); }
+    border-color: none; }
 
 /* Fields */
 input[type="text"],
@@ -413,15 +404,18 @@ textarea {
 a {
   color: white; }
   a:visited {
-    color: purple; }
+    color: white; }
   a:hover, a:focus, a:active {
-    color: midnightblue; }
+    color: lightgrey; }
   a:focus {
     outline: thin dotted; }
   a:hover, a:active {
     outline: 0; }
 
 /* Menus */
+.nav-logo {
+  margin: 5px 10px; }
+
 .main-navigation {
   clear: both;
   display: block; }
@@ -452,6 +446,7 @@ a {
     float: left;
     position: relative; }
   .main-navigation a {
+    margin: 5px 10px;
     display: block;
     text-decoration: none; }
 
@@ -661,13 +656,17 @@ object {
   display: -ms-flexbox;
   display: flex; }
 
+.flex-grow {
+  -ms-flex-positive: 1;
+      flex-grow: 1; }
+
 .flex-row {
   -ms-flex-flow: row wrap;
       flex-flow: row wrap; }
 
 .flex-col {
-  -ms-flex-flow: col wrap;
-      flex-flow: col wrap; }
+  -ms-flex-flow: column wrap;
+      flex-flow: column wrap; }
 
 .flex-center-a {
   -ms-flex-align: center;
@@ -684,15 +683,184 @@ object {
 .height30px {
   height: 30px; }
 
+.height40px {
+  height: 40px; }
+
+.padding10 {
+  padding: 10px; }
+
+.marginH10 {
+  margin: 0px 10px; }
+
+.marginV10 {
+  margin: 10px 0px; }
+
+.width90 {
+  width: 90%; }
+
+.white-color {
+  color: white; }
+
+.orange-color {
+  color: orange; }
+
 .home-shop-cell {
   height: 220px;
   width: 175px;
-  border: solid grey;
+  border: solid lightgrey;
   border-width: 3px 1px 1px 1px;
   margin: 5px;
   padding: 5px; }
 
 .home-shop-button {
-  background-color: green;
   color: white;
   border-style: none; }
+
+.journalThumb {
+  height: 18vw;
+  width: 100%; }
+
+.journalCell {
+  height: auto;
+  width: 28vw; }
+
+.journalButton {
+  background-color: transparent;
+  width: 100px;
+  margin-top: 10px;
+  border-style: solid; }
+
+.journalTxt {
+  color: #248a83;
+  font-weight: bold;
+  letter-spacing: 1px;
+  margin: 5px 0px; }
+
+.journalListButton {
+  color: #000000;
+  background-color: transparent;
+  border: 1px solid #248a83;
+  padding: 5px 13px; }
+
+.journalListImage {
+  position: absolute;
+  height: 35vw;
+  width: 65vw; }
+
+.journalTitleTxt {
+  position: absolute;
+  top: 25%;
+  background-color: #248a83;
+  font-family: Novecento;
+  font-weight: bold;
+  font-size: 1.4em;
+  color: #ffffff;
+  padding: 1rem 3rem 1rem 1rem;
+  max-width: 70%; }
+
+.journalDateTxt {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background-color: #248a83;
+  padding: 1rem 1rem 1rem 3rem;
+  color: #ffffff;
+  font-size: 1em;
+  font-weight: bold; }
+
+.journalContentTxt {
+  margin: 10px 0px; }
+
+.journalImageCell {
+  position: relative;
+  height: 35vw;
+  width: 65vw; }
+
+.greyBox {
+  border: 1px solid lightgrey;
+  border-width: 3px 1px 1px 1px;
+  padding: 10px; }
+
+.latestImg {
+  width: auto;
+  height: 100%;
+  position: center;
+  overflow: hidden; }
+
+.latestPhoto1 {
+  height: 44.5vw;
+  width: 44.5vw;
+  margin: 0vw 0.25vw 0vw 0vw; }
+
+.latestPhoto2 {
+  height: 22vw;
+  width: 44.75vw;
+  margin: 0vw 0vw 0.25vw 0.25vw; }
+
+.latestPhoto3 {
+  height: 21.75vw;
+  width: 22vw;
+  margin: 0.25vw 0.25vw 0vw 0.25vw; }
+
+.latestPhoto4 {
+  height: 21.75vw;
+  width: 22vw;
+  margin: 0.25vw 0vw 0vw 0.25vw; }
+
+.latestButton {
+  color: white;
+  background-color: transparent;
+  border: 1px solid white;
+  padding: 5px 13px; }
+
+.lastestMoreButton {
+  background-color: #248a83;
+  color: white;
+  padding: 5px 13px;
+  margin: 20px 0px;
+  min-width: 100px;
+  max-width: 150px;
+  width: 55%;
+  border-style: none; }
+
+.latestTxt {
+  font-family: Merriweather;
+  font-size: 2.5em;
+  color: white;
+  margin: 15px 0px;
+  line-height: 1.2; }
+
+.latestTxt2 {
+  font-family: Merriweather;
+  font-size: 2em;
+  color: white;
+  margin: 15px 0px 10px 0px;
+  line-height: 1.2; }
+
+.latestTxt3 {
+  font-family: Merriweather;
+  font-size: 1.5em;
+  color: white;
+  margin: 6px 0px 6px 0px;
+  line-height: 1.2; }
+
+.adventureCell {
+  height: 90vh;
+  width: 100%;
+  min-height: 300px; }
+
+.adventureButton {
+  background-color: transparent;
+  padding: 5px 13px;
+  text-decoration: none;
+  border: 2px solid #248a83; }
+
+.verticalLine {
+  border-right: 1px solid grey;
+  margin-right: 5px; }
+
+.footerBG {
+  background-color: black; }
+
+.footerFineSpacing {
+  margin-top: 40px; }

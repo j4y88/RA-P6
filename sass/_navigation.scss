@@ -25,7 +25,9 @@ a {
 }
 
 /* Menus */
-
+.nav-logo {
+	margin: 5px 10px;
+}
 .main-navigation {
 	clear: both;
 	display: block;
@@ -82,7 +84,8 @@ a {
 		&.focus > a {
 		}
 	}
-	a {
+	a {	
+		margin: 5px 10px;
 		display: block;
 		text-decoration: none;
 	}

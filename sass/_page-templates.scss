@@ -6,11 +6,14 @@
 .flex {
 	display: flex;
 }
+.flex-grow {
+  flex-grow:1;
+}
 .flex-row {
 	flex-flow: row wrap;
 }
 .flex-col {
-	flex-flow: col wrap;
+	flex-flow: column wrap;
 }
 .flex-center-a {
 	align-items: center;
@@ -24,16 +27,185 @@
 .height30px {
 	height: 30px;
 }
+.height40px {
+  height: 40px;
+}
+.padding10 {
+	padding: 10px
+}
+.marginH10 {
+  margin: 0px 10px;
+}
+.marginV10 {
+  margin: 10px 0px;
+}
+.width90 {
+  width: 90%;
+}
+.white-color {
+  color: white;
+}
+.orange-color{
+  color: orange;
+}
 .home-shop-cell {
 	height:220px;
 	width:175px;
-	border: solid grey;
+	border: solid lightgrey;
 	border-width: 3px 1px 1px 1px;
 	margin: 5px;
 	padding: 5px;
 }
 .home-shop-button {
-	background-color: green;
 	color: white;
 	border-style: none;
+}
+.journalThumb {
+  height: 18vw;
+  width: 100%;
+}
+.journalCell{
+  height: auto;
+  width: 28vw;
+}
+.journalButton {
+  background-color: transparent;
+  width: 100px;
+  margin-top: 10px;
+  border-style: solid;
+}
+.journalTxt {
+  color : #248a83;
+  font-weight: bold;
+  letter-spacing: 1px;
+  margin: 5px 0px;
+}
+.journalListButton {
+  color: #000000;
+  background-color: transparent;
+  border: 1px solid #248a83;
+  padding: 5px 13px;
+}
+.journalListImage {
+  position: absolute;
+  height: 35vw;
+  width: 65vw;
+}
+.journalTitleTxt {
+  position: absolute;
+  top:25%;
+  background-color: #248a83;
+  font-family: Novecento;
+  font-weight: bold;
+  font-size: 1.4em;
+  color: #ffffff;
+  padding: 1rem 3rem 1rem 1rem;
+  max-width: 70%;
+}
+.journalDateTxt {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background-color: #248a83;
+  padding: 1rem 1rem 1rem 3rem;
+  color: #ffffff;
+  font-size: 1em;
+  font-weight: bold;
+}
+.journalContentTxt {
+  margin: 10px 0px;
+}
+.journalImageCell {
+  position: relative;
+  height: 35vw;
+  width: 65vw;
+}
+.greyBox {
+  border: 1px solid lightgrey;
+  border-width: 3px 1px 1px 1px;
+  padding: 10px;
+}
+.latestImg {
+  width: auto;
+  height: 100%;
+  position: center;
+  overflow: hidden;
+}
+.latestPhoto1 {
+  height: 44.5vw;
+  width: 44.5vw;
+  margin: 0vw 0.25vw 0vw 0vw;
+}
+.latestPhoto2 {
+  height: 22vw;
+  width: 44.75vw;
+  margin: 0vw 0vw 0.25vw 0.25vw;
+}
+.latestPhoto3 {
+  height: 21.75vw;
+  width: 22vw;
+  margin: 0.25vw 0.25vw 0vw 0.25vw;
+}
+.latestPhoto4 {
+  height: 21.75vw;
+  width: 22vw;
+  margin: 0.25vw 0vw 0vw 0.25vw;
+}
+.latestButton {
+  color: white;
+  background-color: transparent;
+  border: 1px solid white;
+  padding: 5px 13px;
+}
+.lastestMoreButton {
+  background-color: #248a83;
+  color:white;
+  padding: 5px 13px;
+  margin: 20px 0px;
+  min-width: 100px;
+  max-width: 150px;
+  width: 55%;
+  border-style: none;
+}
+.latestTxt {
+  font-family: Merriweather;
+  font-size: 2.5em;
+  color: white;
+  margin: 15px 0px;
+  line-height: 1.2;
+}
+.latestTxt2 {
+  font-family: Merriweather;
+  font-size: 2em;
+  color: white;
+  margin: 15px 0px 10px 0px;
+  line-height: 1.2;
+}
+.latestTxt3 {
+  font-family: Merriweather;
+  font-size: 1.5em;
+  color: white;
+  margin: 6px 0px 6px 0px;
+  line-height: 1.2;
+}
+.adventureCell {
+  height:90vh;
+  width:100%;
+  min-height: 300px;
+}
+.adventureButton {
+  background-color: transparent;
+  padding: 5px 13px;
+  text-decoration: none;
+  border: 2px solid #248a83;
+}
+.verticalLine {
+  border-right: 1px solid grey;
+  margin-right: 5px;
+}
+.footerBG {
+  background-color: black;
+}
+.footerFineSpacing{
+  margin-top: 40px;
 }
