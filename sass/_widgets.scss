@@ -15,3 +15,88 @@
 .widget_search .search-submit {
 	display: none;
 }
+
+/* Footer widget */
+
+.textwidget {
+	padding: 20px 15px 25px 0px;
+	color: #fff;
+	font-family: sans-serif;
+	h4 {
+		margin: 0px;
+		padding: 15px 0px;
+		color: orange;
+		font-family: sans-serif;
+	}
+	p {
+		margin: 0px;
+		padding: 10px 0px;
+		color: white;
+		font-family: sans-serif;
+	}
+	div {
+		color: white;
+		font-family: sans-serif;
+		p {
+			margin: 0px;
+		}
+	}
+
+}
+
+aside .textwidget {
+	padding: 10px 5px;
+	color: black;
+	font-family: sans-serif;
+	h4 {
+		margin: 0px;
+		padding: 5px 0px;
+		color: black;
+		font-family: sans-serif;
+	}
+	p {
+		margin: 0px;
+		padding: 5px 0px;
+		color: black;
+		font-family: sans-serif;
+	}
+	div {
+		color: black;
+		font-family: sans-serif;
+		p {
+			margin: 0px;
+		}
+	}
+
+}
+
+.widget_archive {
+	padding: 10px 5px;
+	color: black;
+	font-family: sans-serif;
+	h4 {
+		margin: 0px;
+		padding: 5px 0px;
+		color: black;
+		font-family: sans-serif;
+	}
+	ul {
+		color: black;
+		font-family: sans-serif;
+		list-style: none;
+		li {
+			a{
+				margin: 0px;
+				padding: 5px 0px;
+				text-align: left;
+				color: black;
+			}
+		}
+	}
+
+}
+
+.widget_sp_image {
+	padding: 35px 0px 25px 0px;
+
+}

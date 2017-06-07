@@ -402,11 +402,11 @@ textarea {
 --------------------------------------------------------------*/
 /* Links */
 a {
-  color: white; }
+  color: black; }
   a:visited {
-    color: white; }
+    color: black; }
   a:hover, a:focus, a:active {
-    color: lightgrey; }
+    color: black; }
   a:focus {
     outline: thin dotted; }
   a:hover, a:active {
@@ -549,6 +549,69 @@ a {
 /* Search widget. */
 .widget_search .search-submit {
   display: none; }
+
+/* Footer widget */
+.textwidget {
+  padding: 20px 15px 25px 0px;
+  color: #fff;
+  font-family: sans-serif; }
+  .textwidget h4 {
+    margin: 0px;
+    padding: 15px 0px;
+    color: orange;
+    font-family: sans-serif; }
+  .textwidget p {
+    margin: 0px;
+    padding: 10px 0px;
+    color: white;
+    font-family: sans-serif; }
+  .textwidget div {
+    color: white;
+    font-family: sans-serif; }
+    .textwidget div p {
+      margin: 0px; }
+
+aside .textwidget {
+  padding: 10px 5px;
+  color: black;
+  font-family: sans-serif; }
+  aside .textwidget h4 {
+    margin: 0px;
+    padding: 5px 0px;
+    color: black;
+    font-family: sans-serif; }
+  aside .textwidget p {
+    margin: 0px;
+    padding: 5px 0px;
+    color: black;
+    font-family: sans-serif; }
+  aside .textwidget div {
+    color: black;
+    font-family: sans-serif; }
+    aside .textwidget div p {
+      margin: 0px; }
+
+.widget_archive {
+  padding: 10px 5px;
+  color: black;
+  font-family: sans-serif; }
+  .widget_archive h4 {
+    margin: 0px;
+    padding: 5px 0px;
+    color: black;
+    font-family: sans-serif; }
+  .widget_archive ul {
+    color: black;
+    font-family: sans-serif;
+    list-style: none; }
+    .widget_archive ul li a {
+      margin: 0px;
+      padding: 5px 0px;
+      text-align: left;
+      color: black; }
+
+.widget_sp_image {
+  padding: 35px 0px 25px 0px; }
 
 /*--------------------------------------------------------------
 # Content
@@ -695,8 +758,14 @@ object {
 .marginV10 {
   margin: 10px 0px; }
 
+.marginV5 {
+  margin: 5px 0px; }
+
 .width90 {
   width: 90%; }
+
+.width75 {
+  width: 75%; }
 
 .white-color {
   color: white; }
@@ -774,7 +843,7 @@ object {
 .journalImageCell {
   position: relative;
   height: 35vw;
-  width: 65vw; }
+  width: 60vw; }
 
 .greyBox {
   border: 1px solid lightgrey;
@@ -864,3 +933,20 @@ object {
 
 .footerFineSpacing {
   margin-top: 40px; }
+
+.whitelogo div:nth-child(2) {
+  display: none; }
+
+.greenlogo div:nth-child(1) {
+  display: none; }
+
+#navlogo div {
+  margin: 0px;
+  padding: 0px; }
+  #navlogo div img {
+    height: 35px;
+    width: auto; }
+
+.page-container {
+  width: 84%;
+  margin: 0 auto; }

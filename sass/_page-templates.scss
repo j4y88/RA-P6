@@ -39,8 +39,14 @@
 .marginV10 {
   margin: 10px 0px;
 }
+.marginV5 {
+  margin: 5px 0px;
+}
 .width90 {
   width: 90%;
+}
+.width75 {
+  width: 75%;
 }
 .white-color {
   color: white;
@@ -118,7 +124,7 @@
 .journalImageCell {
   position: relative;
   height: 35vw;
-  width: 65vw;
+  width: 60vw;
 }
 .greyBox {
   border: 1px solid lightgrey;
@@ -208,4 +214,29 @@
 }
 .footerFineSpacing{
   margin-top: 40px;
+}
+.whitelogo {
+  div:nth-child(2) {
+    display: none; 
+  }
+}
+.greenlogo {
+  div:nth-child(1) {
+    display: none; 
+  }
+}
+#navlogo {
+  div {
+    margin: 0px;
+    padding: 0px;
+    img {
+      height: 35px;
+      width: auto;
+    }
+  }
+}
+
+.page-container {
+  width: 84%;
+  margin: 0 auto;
 }

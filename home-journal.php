@@ -15,11 +15,15 @@
 
 	$query = new WP_Query( $args );
 	if ($query->have_posts()) {
+		$i="0";
 		while ($query -> have_posts()) : $query -> the_post();
-		//show_title();
+		$i++;
 		?>
 		<div class="journalCell">
-			<img src="<?php echo get_the_post_thumbnail_url(); ?>" onerror="" class="journalThumb">
+			<style>
+			<?php
+			echo ".journalCellImage".$i."{background: url('".get_the_post_thumbnail_url()."') center center; background-size: cover; height: 22vh; width: 100%; }</style><div class='journalCellImage".$i."'></div>";
+			?>
 			<div class="flex flex-col flex-space-between">
 				<div class="greyBox flex flex-col flex-grow">
 					<div class="">

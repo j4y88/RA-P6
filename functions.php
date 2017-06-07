@@ -39,6 +39,39 @@ function red_starter_setup() {
 endif; // red_starter_setup
 add_action( 'after_setup_theme', 'red_starter_setup' );
 
+function add_sidebars() {
+    register_sidebar( array(
+        'name' => __( 'Footer Sidebar', 'footer_side' ),
+        'id' => 'footer-sidebar',
+        'description' => __( 'Contact Info and Business Hours.', 'theme-footer-slug' ),
+        'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h4>',
+		'after_title'   => '</h4>',
+	    )
+    );
+    register_sidebar( array(
+        'name' => __( 'Top Nav Logo', 'top_nav_side' ),
+        'id' => 'top_nav_sidebar',
+        'description' => __( 'Navigation Logo.', 'theme-nav-slug' ),
+        'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h4>',
+		'after_title'   => '</h4>',
+	    )
+    );
+    register_sidebar( array(
+		'name'          => esc_html( 'Sidebar' ),
+		'id'            => 'sidebar-1',
+		'description'   => '',
+		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</aside>',
+		'before_title'  => '<h4>',
+		'after_title'   => '</h4>',
+	) );
+}
+add_action( 'widgets_init', 'add_sidebars' );
+
 function add_case_type($name) {
     $name_dash=str_replace(" ","_",$type);
     register_post_type( strtolower($name),
@@ -91,24 +124,6 @@ function red_starter_content_width() {
 	$GLOBALS['content_width'] = apply_filters( 'red_starter_content_width', 640 );
 }
 add_action( 'after_setup_theme', 'red_starter_content_width', 0 );
-
-/**
- * Register widget area.
- *
- * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
- */
-function red_starter_widgets_init() {
-	register_sidebar( array(
-		'name'          => esc_html( 'Sidebar' ),
-		'id'            => 'sidebar-1',
-		'description'   => '',
-		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</aside>',
-		'before_title'  => '<h2 class="widget-title">',
-		'after_title'   => '</h2>',
-	) );
-}
-add_action( 'widgets_init', 'red_starter_widgets_init' );
 
 /**
  * Filter the stylesheet_uri to output the minified CSS file.
