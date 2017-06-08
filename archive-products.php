@@ -7,11 +7,14 @@ this is archieve-products.php
 		<?php 
 		echo "<div class='flex flex-col flex-center-a'>";
 		if(have_posts()) {
+			echo "<header class='page-header margin10'>";
+			echo "<h2 class='margin5'>SHOP STUFF</h2>";
 			$terms = get_terms( 'type', array('hide_empty' => false));
-			echo "<header class='page-header margin10 flex flex-col flex-center-a'>";
-			echo "<h2 class='margin5'>".strtoupper($term)."</h2>";
-			echo get_queried_object()->description;
-    		echo "</header>";
+			echo "<div class='flex'>";
+    		foreach ($terms as $term) {
+    			echo "<a href='../type/$term->name' class='margin5'>$term->name</a>";
+    		}
+    		echo "</div></header>";
     	}
     	echo "<section class='flex flex-row flex-space-between width90'>";
 		while (have_posts()) : the_post();
@@ -21,9 +24,9 @@ this is archieve-products.php
 			echo "<div>".get_field('name')."</div>";
 			echo "<div>".get_field('price')."</div>";
 			echo "</div></div></a>";
+
 		endwhile;
 		?>
-		
 		</section>
 		</div>
 		</main><!-- #main -->

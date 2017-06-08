@@ -15,3 +15,4 @@ this is page-shop.php
 
 <?php get_sidebar(); ?>
 <?php get_footer(); ?>
+

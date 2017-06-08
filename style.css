@@ -752,6 +752,12 @@ object {
 .padding10 {
   padding: 10px; }
 
+.margin5 {
+  margin: 5px; }
+
+.margin10 {
+  margin: 10px; }
+
 .marginH10 {
   margin: 0px 10px; }
 
@@ -766,6 +772,9 @@ object {
 
 .width75 {
   width: 75%; }
+
+.width50 {
+  width: 50%; }
 
 .white-color {
   color: white; }
@@ -950,3 +959,21 @@ object {
 .page-container {
   width: 84%;
   margin: 0 auto; }
+
+.productThumb {
+  height: 25vh;
+  width: 25vh;
+  object-fit: cover; }
+
+.btn-black {
+  border: 1px solid #000;
+  padding: 8px 20px;
+  color: #000;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: 'NovecentoSans'; }
+
+.btn-black:hover {
+  color: #fff;
+  background-color: #000;
+  border: 1px solid #000; }

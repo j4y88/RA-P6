@@ -27,7 +27,9 @@
 					<div class='height30px flex flex-center-j'>
 						<nav id="site-navigation" class="main-navigation width90 flex flex-space-between" role="navigation">
 							<div id="navlogo" class="<?php $logo=new display_logo; ?>">
+							<a href="<?php echo site_url();?>">
 								<?php dynamic_sidebar('top-nav-logo'); ?>
+							</a>
 							</div>
 							<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html( 'Primary Menu' ); ?></button>
 							<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>

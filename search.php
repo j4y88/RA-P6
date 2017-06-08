@@ -20,6 +20,9 @@ this is search.php
 			<?php while ( have_posts() ) : the_post(); ?>
 
 				<?php get_template_part( 'template-parts/content', 'search' ); ?>
+				<a href="<?php echo the_permalink(); ?>">
+				    	<button type="button" name="READ MORE" class="journalListButton journalListTxt" ng-click="">READ MORE <i class="fa fa fa-arrow-right" aria-hidden="true"></i></button>
+				</a>
 
 			<?php endwhile; ?>
 
