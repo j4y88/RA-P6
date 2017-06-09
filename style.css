@@ -222,6 +222,44 @@ th {
 /*--------------------------------------------------------------
 # Embedded Fonts
 --------------------------------------------------------------*/
+@font-face {
+  font-family: 'Novecentosanswide';
+  src: url("../../assets/fonts/Novecentosanswide/Novecentosanswide-Normal.ttf");
+  font-weight: 400; }
+
+@font-face {
+  font-family: 'Novecentosanswide';
+  src: url("../../assets/fonts/Novecentosanswide/Novecentosanswide-DemiBold.ttf");
+  font-weight: 800; }
+
+@font-face {
+  font-family: 'Merriweather';
+  src: url("../../assets/fonts/Merriweather/Merriweather-Bold.ttf");
+  font-weight: 800; }
+
+@font-face {
+  font-family: 'Merriweather';
+  src: url("../../assets/fonts/Merriweather/Merriweather-Light.ttf");
+  font-weight: 100; }
+
+@font-face {
+  font-family: 'Merriweather';
+  src: url("../../assets/fonts/Merriweather/Merriweather-LightItalic.ttf");
+  font-weight: 200; }
+
+@font-face {
+  font-family: 'Merriweather';
+  src: url("../../assets/fonts/Merriweather/Merriweather-BoldItalic.ttf");
+  font-weight: 900; }
+
+.Novecento {
+  font-family: Novecentosanswide;
+  font-weight: 400; }
+
+.Merriweather {
+  font-family: Merriweather;
+  font-weight: 100; }
+
 /*--------------------------------------------------------------
 # Typography
 --------------------------------------------------------------*/
@@ -238,6 +276,7 @@ textarea {
 
 /* Headings */
 h1, h2, h3, h4, h5, h6 {
+  font-family: sans-serif;
   clear: both; }
 
 /* Copy */
@@ -346,13 +385,13 @@ input[type="reset"],
 input[type="submit"] {
   border: none;
   border-color: none;
-  border-radius: 3px;
+  border-radius: 2px;
   background: #548683;
-  color: rgba(0, 0, 0, 0.8);
+  color: white;
   font-size: 12px;
   font-size: 0.75rem;
   line-height: 1;
-  padding: .6rem 1rem .4rem;
+  padding: 8px 20px;
   text-shadow: none; }
   button:hover,
   input[type="button"]:hover,
@@ -377,7 +416,8 @@ input[type="search"],
 textarea {
   color: #666;
   border: 1px solid #ccc;
-  border-radius: 3px; }
+  border-radius: 3px;
+  background-color: #efefef; }
   input[type="text"]:focus,
   input[type="email"]:focus,
   input[type="url"]:focus,
@@ -391,18 +431,48 @@ input[type="email"],
 input[type="url"],
 input[type="password"],
 input[type="search"] {
-  padding: 3px; }
+  padding: 3px;
+  background-color: #efefef; }
 
 textarea {
   padding-left: 3px;
-  width: 100%; }
+  width: 80%;
+  background-color: #efefef; }
+
+nav input[type=search] {
+  width: 100px;
+  box-sizing: border-box;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  background-image: url("./assets/images/search-icon.png") cover;
+  background-size: 30px auto;
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  padding: 4px 10px 4px 10px;
+  transition: width 0.4s ease-in-out; }
+
+nav input[type=search]:focus {
+  width: 80%;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: white;
+  background: url("./assets/images/search-icon.png") cover;
+  background-size: 30px auto;
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  padding: 4px 10px 4px 10px;
+  transition: width 0.4s ease-in-out; }
 
 /*--------------------------------------------------------------
 # Navigation
 --------------------------------------------------------------*/
 /* Links */
 a {
-  color: black; }
+  color: black;
+  text-decoration: none; }
   a:visited {
     color: black; }
   a:hover, a:focus, a:active {
@@ -449,6 +519,15 @@ a {
     margin: 5px 10px;
     display: block;
     text-decoration: none; }
+
+.whitelogo .menu li a {
+  color: white;
+  text-shadow: 1px 1px darkgrey;
+  font-weight: 400; }
+
+.greenlogo .menu li a {
+  color: black;
+  font-weight: 400; }
 
 /* Small menu. */
 .menu-toggle,
@@ -553,65 +632,63 @@ a {
 /* Footer widget */
 .textwidget {
   padding: 20px 15px 25px 0px;
-  color: #fff;
-  font-family: sans-serif; }
+  color: #fff; }
   .textwidget h4 {
     margin: 0px;
     padding: 15px 0px;
-    color: orange;
-    font-family: sans-serif; }
+    color: orange; }
   .textwidget p {
     margin: 0px;
     padding: 10px 0px;
-    color: white;
-    font-family: sans-serif; }
+    color: white; }
   .textwidget div {
-    color: white;
-    font-family: sans-serif; }
+    color: white; }
     .textwidget div p {
       margin: 0px; }
 
 aside .textwidget {
   padding: 10px 5px;
-  color: black;
-  font-family: sans-serif; }
+  color: black; }
   aside .textwidget h4 {
     margin: 0px;
     padding: 5px 0px;
     color: black;
-    font-family: sans-serif; }
+    text-transform: uppercase;
+    letter-spacing: 2px; }
   aside .textwidget p {
     margin: 0px;
     padding: 5px 0px;
-    color: black;
-    font-family: sans-serif; }
+    color: black; }
   aside .textwidget div {
-    color: black;
-    font-family: sans-serif; }
+    color: black; }
     aside .textwidget div p {
       margin: 0px; }
 
 .widget_archive {
   padding: 10px 5px;
-  color: black;
-  font-family: sans-serif; }
+  color: black; }
   .widget_archive h4 {
     margin: 0px;
     padding: 5px 0px;
     color: black;
-    font-family: sans-serif; }
+    text-transform: uppercase;
+    letter-spacing: 2px; }
   .widget_archive ul {
     color: black;
-    font-family: sans-serif;
-    list-style: none; }
+    list-style: none;
+    margin: 10px 0px;
+    padding: 0px; }
     .widget_archive ul li a {
       margin: 0px;
       padding: 5px 0px;
       text-align: left;
-      color: black; }
+      color: black;
+      font-family: Merriweather; }
 
-.widget_sp_image {
-  padding: 35px 0px 25px 0px; }
+footer .widget_sp_image img {
+  padding: 35px 0px 25px 0px;
+  height: 45px;
+  width: auto; }
 
 /*--------------------------------------------------------------
 # Content
@@ -715,9 +792,21 @@ object {
 # Page Templates
 --------------------------------------------------------------*/
 /* Front page */
+p {
+  font-family: Merriweather;
+  font-weight: 100; }
+
+h2 {
+  font-weight: 400;
+  margin: 40px; }
+
 .flex {
   display: -ms-flexbox;
   display: flex; }
+
+.flex1 {
+  -ms-flex: 1;
+      flex: 1; }
 
 .flex-grow {
   -ms-flex-positive: 1;
@@ -752,20 +841,50 @@ object {
 .padding10 {
   padding: 10px; }
 
+.paddingB40 {
+  padding-bottom: 40px; }
+
+.paddingL30 {
+  padding-left: 30px; }
+
+.paddingR30 {
+  padding-right: 30px; }
+
+.paddingH20 {
+  padding: 0px 20px; }
+
 .margin5 {
   margin: 5px; }
 
 .margin10 {
   margin: 10px; }
 
+.marginH5 {
+  margin: 0px 5px; }
+
 .marginH10 {
   margin: 0px 10px; }
+
+.marginH20 {
+  margin: 0px 20px; }
+
+.marginT40 {
+  margin-top: 40px; }
+
+.marginB40 {
+  margin-bottom: 40px; }
+
+.marginB20 {
+  margin-bottom: 20px; }
 
 .marginV10 {
   margin: 10px 0px; }
 
 .marginV5 {
   margin: 5px 0px; }
+
+.width100 {
+  width: 100%; }
 
 .width90 {
   width: 90%; }
@@ -789,14 +908,30 @@ object {
   border-width: 3px 1px 1px 1px;
   margin: 5px;
   padding: 5px; }
+  .home-shop-cell p {
+    padding: 5px;
+    line-height: 1.5;
+    text-align: center;
+    margin: 15px 0px; }
+  .home-shop-cell a button {
+    text-transform: uppercase;
+    font-weight: 100; }
 
 .home-shop-button {
   color: white;
-  border-style: none; }
+  border-style: none;
+  padding: .5rem 1rem; }
 
 .journalThumb {
   height: 18vw;
   width: 100%; }
+
+#journeyInfo p {
+  margin: 5px 0px 0px; }
+
+#journeyInfo h3 {
+  letter-spacing: 0.5px;
+  text-transform: uppercase; }
 
 .journalCell {
   height: auto;
@@ -804,9 +939,10 @@ object {
 
 .journalButton {
   background-color: transparent;
-  width: 100px;
+  width: 120px;
+  color: black;
   margin-top: 10px;
-  border-style: solid; }
+  border: 1px solid grey; }
 
 .journalTxt {
   color: #248a83;
@@ -827,13 +963,13 @@ object {
 
 .journalTitleTxt {
   position: absolute;
-  top: 25%;
+  top: 10%;
   background-color: #248a83;
   font-family: Novecento;
   font-weight: bold;
   font-size: 1.4em;
   color: #ffffff;
-  padding: 1rem 3rem 1rem 1rem;
+  padding: 0.5rem 2rem 0.5rem 0.5rem;
   max-width: 70%; }
 
 .journalDateTxt {
@@ -841,7 +977,7 @@ object {
   bottom: 0;
   right: 0;
   background-color: #248a83;
-  padding: 1rem 1rem 1rem 3rem;
+  padding: 0.5rem 0.5rem 0.5rem 2rem;
   color: #ffffff;
   font-size: 1em;
   font-weight: bold; }
@@ -865,25 +1001,28 @@ object {
   position: center;
   overflow: hidden; }
 
+.adventure-grid {
+  width: 100%;
+  height: 70vh; }
+
 .latestPhoto1 {
-  height: 44.5vw;
-  width: 44.5vw;
-  margin: 0vw 0.25vw 0vw 0vw; }
+  height: 100%;
+  width: 50%;
+  margin-right: 10px; }
 
 .latestPhoto2 {
-  height: 22vw;
-  width: 44.75vw;
-  margin: 0vw 0vw 0.25vw 0.25vw; }
+  height: 50%;
+  width: 100%;
+  margin-bottom: 10px; }
 
 .latestPhoto3 {
-  height: 21.75vw;
-  width: 22vw;
-  margin: 0.25vw 0.25vw 0vw 0.25vw; }
+  height: 100%;
+  width: 100%;
+  margin-right: 10px; }
 
 .latestPhoto4 {
-  height: 21.75vw;
-  width: 22vw;
-  margin: 0.25vw 0vw 0vw 0.25vw; }
+  height: 100%;
+  width: 100%; }
 
 .latestButton {
   color: white;
@@ -894,11 +1033,8 @@ object {
 .lastestMoreButton {
   background-color: #248a83;
   color: white;
-  padding: 5px 13px;
-  margin: 20px 0px;
-  min-width: 100px;
-  max-width: 150px;
-  width: 55%;
+  padding: .5rem 1rem;
+  margin: 20px 0px 50px;
   border-style: none; }
 
 .latestTxt {
@@ -937,6 +1073,10 @@ object {
   border-right: 1px solid grey;
   margin-right: 5px; }
 
+.horizontalLine {
+  border-bottom: 1px solid grey;
+  margin-bottom: 5px; }
+
 .footerBG {
   background-color: black; }
 
@@ -965,15 +1105,135 @@ object {
   width: 25vh;
   object-fit: cover; }
 
-.btn-black {
+.btn-black, .btn-black:hover, .btn-black:active, .btn-black:visited {
   border: 1px solid #000;
   padding: 8px 20px;
   color: #000;
   text-decoration: none;
-  text-transform: uppercase;
-  font-family: 'NovecentoSans'; }
+  text-transform: uppercase; }
 
-.btn-black:hover {
+.btn-white, .btn-white:hover, .btn-white:active, .btn-white:visited {
+  border: 1px solid #fff;
+  padding: 8px 20px;
   color: #fff;
-  background-color: #000;
-  border: 1px solid #000; }
+  text-decoration: none;
+  text-transform: uppercase; }
+
+.adventure-cell {
+  width: 55vh;
+  height: 55vh;
+  margin: 10px;
+  color: #fff;
+  box-sizing: border-box;
+  padding: 25px 30px; }
+  .adventure-cell h3 {
+    font-family: 'Merriweather', serif;
+    font-size: 35px;
+    text-transform: none;
+    letter-spacing: .5px;
+    line-height: 1.2; }
+
+#productInfo h1 {
+  margin: 0px;
+  text-transform: uppercase; }
+
+#productInfo h3 {
+  font-weight: 400; }
+
+.search-info h2 {
+  margin: 0px;
+  text-transform: uppercase;
+  font-weight: 800; }
+
+.search-info p {
+  margin: 0px; }
+
+#adventureInfo h2 {
+  margin: 40px 0px 0px 0px;
+  padding: 0px;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 2px; }
+
+#adventureInfo h5 {
+  text-transform: uppercase;
+  font-weight: 400;
+  margin: 15px 0px 0px 0px;
+  padding: 0px; }
+
+#adventureInfo p {
+  line-height: 1.5;
+  margin: 10px 0px; }
+
+#aboutInfo h1 {
+  margin: 0px;
+  text-align: center;
+  text-transform: uppercase; }
+
+#aboutInfo h2 {
+  margin: 0px;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 2px; }
+
+.about-title {
+  position: relative;
+  bottom: 41vh; }
+
+.aboutInfo {
+  position: relative;
+  bottom: 5vh; }
+
+.findInfo h1 {
+  margin: 5px 0px;
+  text-align: left;
+  font-weight: bold; }
+
+.findInfo h2 {
+  margin: 0px;
+  text-align: left;
+  font-weight: bold; }
+
+.findInfo .wpcf7 label {
+  font-family: sans-serif;
+  font-weight: 400;
+  font-size: 13px;
+  text-transform: uppercase; }
+
+.inlineflex {
+  display: inlineflex; }
+
+.nav-search-logo {
+  position: relative; }
+
+.adventure-grid2 {
+  width: 100%;
+  height: 70vh;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  box-sizing: border-box; }
+
+.latestTest {
+  height: 100%;
+  width: 50%;
+  box-sizing: border-box; }
+
+.latestTest2 {
+  height: 50%;
+  width: 50%;
+  box-sizing: border-box; }
+
+.latestTest3 {
+  height: 50%;
+  width: 25%;
+  box-sizing: border-box; }
+
+.latestTest4 {
+  height: 50%;
+  width: 25%;
+  box-sizing: border-box; }

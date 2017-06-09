@@ -29,11 +29,15 @@ this is single.php
 				</div>
 				<?php endwhile; 
 				}
+				echo "<div class='flex'>";
 				echo red_starter_entry_footer();
+				echo "</div>";
 				?>
-				<a href='#' class='btn-black'><i class='fa fa-facebook' aria-hidden='true'></i> Like</a>
-				<a href='#' class='btn-black'><i class='fa fa-twitter' aria-hidden='true'></i> Tweet</a>
-				<a href='#' class='btn-black'><i class='fa fa-pinterest' aria-hidden='true'></i> Pin</a>
+				<div id="social" class="flex">
+					<a href='#' class='btn-black'><i class='fa fa-facebook' aria-hidden='true'></i> Like</a>
+					<a href='#' class='btn-black marginH10'><i class='fa fa-twitter' aria-hidden='true'></i> Tweet</a>
+					<a href='#' class='btn-black'><i class='fa fa-pinterest' aria-hidden='true'></i> Pin</a>
+				</div>
 			<?php
 				// If comments are open or we have at least one comment, load up the comment template.
 				if ( comments_open() || get_comments_number() ) :

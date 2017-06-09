@@ -6,6 +6,7 @@
 
 a {
 	color: $color__link;
+	text-decoration: none;
 
 	&:visited {
 		color: $color__link-visited;
@@ -94,6 +95,15 @@ a {
 	.current-menu-item > a,
 	.current_page_ancestor > a {
 	}
+}
+.whitelogo .menu li a {
+	color: white;
+	text-shadow: 1px 1px darkgrey;
+	font-weight: 400;
+}
+.greenlogo .menu li a {
+	color: black;
+	font-weight: 400;
 }
 
 /* Small menu. */

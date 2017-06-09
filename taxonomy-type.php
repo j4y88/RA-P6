@@ -8,9 +8,9 @@ this is archieve-products.php
 		echo "<div class='flex flex-col flex-center-a'>";
 		if(have_posts()) {
 			$terms = get_terms( 'type', array('hide_empty' => false));
-			echo "<header class='page-header margin10 flex flex-col flex-center-a'>";
+			echo "<header class='flex margin10 flex flex-col flex-center-a horizontalLine width90'>";
 			echo "<h2 class='margin5'>".strtoupper($term)."</h2>";
-			echo get_queried_object()->description;
+			echo "<p class='marginB40'>".get_queried_object()->description."</p>";
     		echo "</header>";
     	}
     	echo "<section class='flex flex-row flex-space-between width90'>";

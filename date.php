@@ -7,7 +7,7 @@
 
 get_header();
 $args = array(
-'posts_per_page' => 5,
+'posts_per_page' => 10,
 'orderby' => 'post_date',
 'order' => 'DESC',
 'post_status' => 'publish', 
@@ -15,13 +15,16 @@ $args = array(
 
 $query = new WP_Query( $args );
 ?>
-this is home.php
+this is date.php
 <div class="flex flex-center-j">
 	<section id="latestjournals" class="flex width90">
 		<div class="width75">
 			<div class="flex flex-col verticalLine">
 				<h1>LATEST JOURNAL POST</h1>
-				<?php if ($query->have_posts()) { $i=0; while ($query -> have_posts()) : $query -> the_post(); $i++; ?>
+				<?php if (have_posts()) { 
+					$i=0; 
+					while (have_posts()) : the_post(); 
+					$i++; ?>
 			  	<div class="width90 marginB25">
 			  		<style>
 			  		<?php echo ".journalImage".$i."{"; ?>

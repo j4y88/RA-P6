@@ -7,12 +7,12 @@ this is archieve-products.php
 		<?php 
 		echo "<div class='flex flex-col flex-center-a'>";
 		if(have_posts()) {
-			echo "<header class='page-header margin10'>";
+			echo "<header class='flex flex-col flex-center-a margin10 horizontalLine width90'>";
 			echo "<h2 class='margin5'>SHOP STUFF</h2>";
 			$terms = get_terms( 'type', array('hide_empty' => false));
-			echo "<div class='flex'>";
+			echo "<div class='flex marginB20'>";
     		foreach ($terms as $term) {
-    			echo "<a href='../type/$term->name' class='margin5'>$term->name</a>";
+    			echo "<a href='../type/$term->name' class='marginH20'>$term->name</a>";
     		}
     		echo "</div></header>";
     	}

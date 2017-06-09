@@ -26,7 +26,7 @@
 			?>
 			<div class="flex flex-col flex-space-between">
 				<div class="greyBox flex flex-col flex-grow">
-					<div class="">
+					<div id="journeyInfo">
 						<p><?php 
 							echo date('j F Y', strtotime(get_the_date()))." / ".get_comments_number()." Comments"; ?>
 							</p>
